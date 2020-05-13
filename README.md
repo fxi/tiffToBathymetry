@@ -1,7 +1,5 @@
 # Script to convert tiff to bathymetry contour mbtiles
 
-**proof of concept**
-
 ![sample](images/bathymetry_sample.gif)
 
 
@@ -15,6 +13,10 @@
 1. Download SRTM data from http://www.shadedrelief.com/cleantopo2/
 2. Replace value above 10000 by nulls. In GRASS : `r.mapcalc expression="clean_topo_ocean = clean_topo > 10000 ? null() : 10000 - clean_topo" --overwrite`
 3. Export as geotiff
+
+## Configuration
+
+- none. Yet. It's hardcoded in the script
 
 ## Usage
 
